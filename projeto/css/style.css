@@ -1,0 +1,325 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --Cor-padrao: #ff523b;
+    --Cor-padrao-hover: #ff3b2e;
+    --Cor-fonte: #fff;
+    --Cor-fonte-p: #333;
+    --Cor-btn-fonte: #1a1a1a;
+    --Cor-fonte-corpo: #333;
+}
+
+/* ================= HEADER ================= */
+.header {
+    height: 100vh;
+    background: url('../img/banner.jpeg') no-repeat center/cover;
+    position: relative;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+/* NAVBAR */
+.navbar {
+    position: absolute;
+    width: 100%;
+    padding: 20px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 3;
+
+    background: rgba(255, 87, 34, 0.6);
+}
+
+.logo {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* BOTÃO */
+.btn {
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    z-index: 2;
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+    color: #fff;
+
+    background: rgba(0,0,0,0.35);
+    padding: 40px;
+    border-radius: 15px;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+}
+
+.btn-hero {
+    background: var(--Cor-padrao-hover);
+    padding: 15px 30px;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ================= SOBRE ================= */
+.sobre {
+.texto p{
+    color:#fff;
+}
+
+    padding: 80px 50px;
+background: linear-gradient(
+    180deg,
+    #ff7a66 0%,
+    #ff523b 100%
+); h3{
+    color: #000000;
+}
+}
+
+.container-sobre {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.texto h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #6b5b7b;
+}
+
+.texto p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.imagem img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ================= CARDS ================= */
+.espaco {
+    padding: 80px 50px;
+    text-align: center;
+    background: var(--Cor-padrao-hover);
+
+    /* permite ver fundo atrás se existir */
+    position: relative;
+}
+
+.espaco h2 {
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.9);
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 300px;
+
+    transition: 0.3s;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+    backdrop-filter: blur(4px);
+}
+
+/* EFEITO HOVER */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+
+/* IMAGEM */
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* TITULO */
+.card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+/* TEXTO */
+.card p {
+    font-size: 14px;
+    color: #8a6d8f;
+}
+
+/* ================= FOOTER ================= */
+.rodape {
+    background: #1a1a1a;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.rodape .linha {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: start;
+}
+
+.col-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.col-4 h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    min-height: 48px;
+}
+
+.col-4 p,
+.col-4 li {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.5;
+    list-style: none;
+}
+
+.col-4 ul {
+    padding: 0;
+}
+
+.col-4 li {
+    margin-bottom: 6px;
+}
+
+.col-4 a {
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.col-4 a:hover {
+    color: #fff;
+}
+
+.col-4 img {
+    max-width: 140px;
+    margin-bottom: 10px;
+}
+
+.rodape hr {
+    margin: 30px 20px 20px;
+    border: none;
+    height: 1px;
+    background: #333;
+}
+
+.direitos {
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container-sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape .linha {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .rodape .linha {
+        grid-template-columns: 1fr;
+    }
+}
